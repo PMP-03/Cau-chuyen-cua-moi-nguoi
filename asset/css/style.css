@@ -36,7 +36,8 @@ li {
 main {
     max-width: 650px;
     margin: 0 auto;
-    padding: 20px;
+    border-radius: 10px;
+    padding: 20px 40px;
     background: #0e1116;
 }
 .story-title,
@@ -71,6 +72,9 @@ main {
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+.opa{
+    opacity: 0.1;
 }
 .operation{
     display: flex;
@@ -199,4 +203,131 @@ p {
     padding: 20px;
     border-top: 2px solid #3e444c;
     border-bottom: 2px solid #3e444c;
+}
+
+
+/* =============== */
+
+/* --- HIỆU ỨNG ĐÈN LỒNG --- */
+.sky-container {
+    position: fixed;
+    top: 0; left: 0px; width: 100%; height: 100%;
+    pointer-events: none; /* Không cản trở cuộn trang */
+    z-index: 5;
+    overflow: hidden;
+}
+.lantern {
+    position: absolute;
+    bottom: -100px;
+    width: 60px; /* Chỉnh theo kích thước ảnh của bạn */
+    height: 90px;
+    background-image: url('../img/den.png'); /* <--- THAY ĐƯỜNG DẪN ẢNH TẠI ĐÂY */
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    pointer-events: auto; /* Cho phép click vào ảnh */
+    filter: drop-shadow(0 0 15px rgba(255, 165, 0, 0.6)); /* Tạo hiệu ứng phát sáng cho ảnh */
+    
+    animation: riseUp 20s linear infinite;
+    animation-delay: var(--d);
+    scale: var(--s);
+}
+.lantern:hover{
+    width: 70px;
+    height: 110px;
+    transition: all 0.2s ease-in-out;
+    filter: drop-shadow(0 0 15px rgba(255, 165, 0, 1));
+}
+
+.lantern.left { left: var(--p); }
+.lantern.right { right: var(--p); }
+
+@keyframes riseUp {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.9; }
+    50% { transform: translateY(-50vh) rotate(10deg) translateX(20px); }
+    100% { transform: translateY(-110vh) rotate(-10deg) translateX(-10px); opacity: 0; }
+}
+
+/* --- BẢNG THÔNG ĐIỆP (MODAL) --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    align-items: center; justify-content: center;
+}
+
+.modal-content {
+    background: #0e1116;
+    padding: 30px;
+    border: 1px solid #3e444c;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 300px;
+    color: #f1f6fb;
+    position: relative;
+    box-shadow: 0 0 30px rgba(255, 157, 0, 0.3);
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.close-btn {
+    position: absolute; top: 5px; right: 15px;
+    font-size: 28px; cursor: pointer; color: #7a828a;
+}
+@media (max-width: 1120px) {
+    .lantern{
+        width: 40px;
+        height: 50px;
+    }
+    .sky-container.left {
+        left: 0;
+        width: calc((100% - 700px) / 2);
+    }
+
+    .sky-container.right {
+        right: 0;
+        width: calc((100% - 700px) / 2);
+    }
+
+    /* Giảm nhẹ kích thước đèn để không tạo cảm giác chật chội */
+    .lantern {
+        transform: scale(calc(var(--s) * 0.8));
+    }
+}
+
+/* --- TỐI ƯU CHO ĐIỆN THOẠI --- */
+@media (max-width: 920px) {
+
+    .lantern {
+        width: 40px; /* Thu nhỏ kích thước đèn */
+        height: 55px;
+        filter: blur(1px) opacity(1); /* Làm mờ hẳn đi để không gây xao nhãng */
+        animation-duration: 30s; /* Đã chậm rồi, trên điện thoại cho chậm hơn nữa */
+    }
+
+    /* .sky-container.left { left: 0; }
+    .sky-container.right { right: 0; } */
+    
+    /* Thu nhỏ bảng thông báo tin nhắn trên điện thoại */
+    .modal-content {
+        width: 80%;
+        padding: 20px;
+        font-size: 14px;
+    }
+    /* Đẩy đèn ra sát mép biên hơn nữa */
+    .lantern.left { left: 0% !important; }
+    .lantern.right { right: 2% !important; }
+}
+@media (max-width: 685px){
+    .lantern {
+        width: 30px; /* Thu nhỏ kích thước đèn */
+        height: 40px;
+        filter: blur(1px) opacity(0.7); /* Làm mờ hẳn đi để không gây xao nhãng */
+        animation-duration: 40s; /* Đã chậm rồi, trên điện thoại cho chậm hơn nữa */
+    }
+    .lantern.left { left: -1% !important; }
+    .lantern.right { right: 2% !important; }
 }

@@ -7,6 +7,69 @@
         <link rel="stylesheet" href="./asset/css/style.css" />
     </head>
     <body>
+        <div class="sky-container">
+            <div
+                class="lantern far left"
+                data-message="Khoảng cách là thử thách, chân thành là câu trả lời."
+                style="--d: 0s; --p: 3%; --s: 0.8"
+            ></div>
+            <div
+                class="lantern far left"
+                data-message="Cảm ơn vì đã đi cùng nhau một đoạn tuổi trẻ. Mong bình yên sẽ tìm đến hai ta."
+                style="--d: 5s; --p: 10%; --s: 1.2"
+            ></div>
+            <div
+                class="lantern far left"
+                data-message="Cách xa vạn dặm, lòng vẫn chung một mặt trời."
+                style="--d: 10s; --p: 7%; --s: 0.9"
+            ></div>
+            <div
+                class="lantern far left"
+                data-message="Mong gió nơi người dịu dàng với đôi vai nhỏ ấy."
+                style="--d: 15s; --p: 15%; --s: 1.1"
+            ></div>
+            <div
+                class="lantern far left"
+                data-message="Trưởng thành là khi ta biết trân trọng những lần lỡ hẹn."
+                style="--d: 20s; --p: 20%; --s: 0.7"
+            ></div>
+            <div
+                class="lantern far left"
+                data-message="Cảm ơn vì đã kiên nhẫn với một cậu bé bướng bỉnh như tôi."
+                style="--d: 25s; --p: 0%; --s: 1"
+            ></div>
+
+            <div
+                class="lantern far right"
+                data-message="Vạn sự như ý, mọi điều suôn sẻ nhé!"
+                style="--d: 2s; --p: 5%; --s: 1.1"
+            ></div>
+            <div
+                class="lantern far right"
+                data-message="Mỗi chương truyện là một hành trình mới."
+                style="--d: 6s; --p: 20%; --s: 0.7"
+            ></div>
+            <div
+                class="lantern far right"
+                data-message="Hãy luôn tỏa sáng như ánh đèn này nhé!"
+                style="--d: 10s; --p: 12%; --s: 1.3"
+            ></div>
+            <div
+                class="lantern far right"
+                data-message="Chúc người bình yên giữa phố núi, chúc tôi vững chãi nơi biển khơi."
+                style="--d: 14s; --p: 3%; --s: 0.9"
+            ></div>
+            <div
+                class="lantern far right"
+                data-message="Mong chúng ta của sau này, đều trở thành bản thể rực rỡ nhất."
+                style="--d: 18s; --p: 8%; --s: 1.2"
+            ></div>
+            <div
+                class="lantern far right"
+                data-message="Thương người, bông hoa nhỏ của tôi."
+                style="--d: 22s; --p: 18%; --s: 1"
+            ></div>
+        </div>
         <main>
             <section>
                 <div class="story-container">
@@ -15,22 +78,35 @@
                     <div class="chapter-group">
                         <h2 class="chapter-title">Chương 1: Dạ khúc ban mai</h2>
                         <ul class="chap-list">
-                            <li class="chap-item"><a href="./page/chuong1/chap1.html">Chap 1</a></li>
-                            <li class="chap-item"><a href="./page/chuong1/chap2.html">Chap 2</a></li>
+                            <li class="chap-item">
+                                <a href="./page/chuong1/chap1.html">Chap 1</a>
+                            </li>
+                            <li class="chap-item">
+                                <a href="./page/chuong1/chap2.html">Chap 2</a>
+                            </li>
                         </ul>
                     </div>
 
                     <div class="chapter-group">
-                        <h2 class="chapter-title">Chương 2: Nhà lữ hành (coming soon)</h2>
+                        <h2 class="chapter-title">
+                            Chương 2: Nhà lữ hành (coming soon)
+                        </h2>
                         <ul class="chap-list">
-                            <li class="chap-item"><a href="#!">Chap 1</a></li>
-                            <li class="chap-item"><a href="#!">Chap 2</a></li>
-                            <li class="chap-item"><a href="#!">Chap 3</a></li>
-                            <li class="chap-item"><a href="#!">Chap 4</a></li>
+                            <li class="chap-item opa">Chap 1</li>
+                            <li class="chap-item opa">Chap 2</li>
+                            <li class="chap-item opa">Chap 3</li>
+                            <li class="chap-item opa">Chap 4</li>
                         </ul>
                     </div>
                 </div>
             </section>
         </main>
+        <div id="messageModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <p id="messageText"></p>
+            </div>
+        </div>
+        <script src="./asset/JS/main.js"></script>
     </body>
 </html>
