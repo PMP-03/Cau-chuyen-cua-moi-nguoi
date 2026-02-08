@@ -95,7 +95,19 @@ main {
     background:#f1f6fb;
     color: #3e444c;
 }
-
+.lantern-btn{
+    color: #3e444c;
+    transition: all 0.4s ease-in-out;
+}
+.lantern-btn:hover{
+    color: #f1f6fb;
+    background: transparent;
+}
+.home{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
 /* chuong 1: chap 1 */
 .opening-quote {
     margin-top: 20px;
@@ -311,8 +323,8 @@ p {
     .lantern {
         width: 40px; /* Thu nhỏ kích thước đèn */
         height: 55px;
-        filter: blur(1px) opacity(1); /* Làm mờ hẳn đi để không gây xao nhãng */
-        animation-duration: 30s; /* Đã chậm rồi, trên điện thoại cho chậm hơn nữa */
+        /* filter: blur(1px) opacity(1); Làm mờ hẳn đi để không gây xao nhãng */
+        animation-duration: 20s; /* Đã chậm rồi, trên điện thoại cho chậm hơn nữa */
     }
 
     /* .sky-container.left { left: 0; }
@@ -330,10 +342,10 @@ p {
 }
 @media (max-width: 685px){
     .lantern {
-        width: 30px; /* Thu nhỏ kích thước đèn */
-        height: 40px;
-        filter: blur(1px) opacity(0.7); /* Làm mờ hẳn đi để không gây xao nhãng */
-        animation-duration: 40s; /* Đã chậm rồi, trên điện thoại cho chậm hơn nữa */
+        width: 40px; /* Thu nhỏ kích thước đèn */
+        height: 55px;
+        /* filter: blur(1px) opacity(1); Làm mờ hẳn đi để không gây xao nhãng */
+        animation-duration: 20s; /* Đã chậm rồi, trên điện thoại cho chậm hơn nữa */
     }
     .lantern.left { left: -1% !important; }
     .lantern.right { right: 2% !important; }
