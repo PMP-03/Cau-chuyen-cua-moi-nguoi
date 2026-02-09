@@ -245,7 +245,7 @@ p {
     background-repeat: no-repeat;
     cursor: pointer;
     pointer-events: auto; /* Cho phép click vào ảnh */
-    filter: drop-shadow(0 0 15px rgba(255, 165, 0, 0.6)); /* Tạo hiệu ứng phát sáng cho ảnh */
+    filter: drop-shadow(0 0 15px rgba(255, 165, 0, 0.7)); /* Tạo hiệu ứng phát sáng cho ảnh */
     
     animation: riseUp 20s linear infinite;
     animation-delay: var(--d);
