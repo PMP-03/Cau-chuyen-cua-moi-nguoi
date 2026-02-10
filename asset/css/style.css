@@ -352,3 +352,11 @@ p {
     .lantern.left { left: -1% !important; }
     .lantern.right { right: 2% !important; }
 }
+@media (max-width: 500px){
+    .operation{
+        gap: 10px;
+    }
+    .button{
+        font-size: 1.1rem;
+    }
+}
