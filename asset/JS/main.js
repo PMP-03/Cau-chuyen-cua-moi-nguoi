@@ -93,12 +93,12 @@
 
             // Khi nhấn nút "Thả đèn trời"
             function launchManyLanterns() {
-                const count = 20 + Math.floor(Math.random() * 25); // 20-35 đèn
+                const count = 20 + Math.floor(Math.random() * 35); // 20-35 đèn
 
                 for (let i = 0; i < count; i++) {
                     setTimeout(() => {
                         createRandomLantern();
-                    }, i * 500); // Mỗi đèn cách nhau 200ms
+                    }, i * 600); // Mỗi đèn cách nhau 200ms
                 }
             }
 
