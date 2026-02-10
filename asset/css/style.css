@@ -219,7 +219,12 @@ p {
     border-top: 2px solid #3e444c;
     border-bottom: 2px solid #3e444c;
 }
-
+.thumb{
+    height: 50vh;
+}
+.space{
+    height: 50vh;
+}
 
 /* =============== */
 
@@ -326,7 +331,7 @@ p {
         width: 40px; /* Thu nhỏ kích thước đèn */
         height: 55px;
         /* filter: blur(1px) opacity(1); Làm mờ hẳn đi để không gây xao nhãng */
-        animation-duration: 20s; /* Đã chậm rồi, trên điện thoại cho chậm hơn nữa */
+        /* animation-duration: 20s; Đã chậm rồi, trên điện thoại cho chậm hơn nữa */
     }
 
     /* .sky-container.left { left: 0; }
@@ -354,7 +359,7 @@ p {
 }
 @media (max-width: 500px){
     .operation{
-        gap: 10px;
+        gap: 5px;
     }
     .button{
         font-size: 1.1rem;

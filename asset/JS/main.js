@@ -98,7 +98,7 @@
                 for (let i = 0; i < count; i++) {
                     setTimeout(() => {
                         createRandomLantern();
-                    }, i * 600); // Mỗi đèn cách nhau 200ms
+                    }, i * 800); // Mỗi đèn cách nhau 200ms
                 }
             }
 
