@@ -263,7 +263,7 @@ p {
 
 @keyframes riseUp {
     0% { transform: translateY(0) rotate(0deg); opacity: 0; }
-    10% { opacity: 0.9; }
+    10% { opacity: 1; }
     50% { transform: translateY(-50vh) rotate(10deg) translateX(20px); }
     100% { transform: translateY(-110vh) rotate(-10deg) translateX(-10px); opacity: 0; }
 }
