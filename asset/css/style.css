@@ -108,6 +108,10 @@ main {
     padding-bottom: 20px;
     text-align: center;
 }
+section{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 /* chuong 1: chap 1 */
 .opening-quote {
     margin-top: 20px;
